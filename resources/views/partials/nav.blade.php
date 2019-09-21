@@ -11,7 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="{{url('/api/test')}}" class="nav-link">API</a>
+                    <a href="{{url('/api')}}" class="nav-link">API</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Guide</a>
