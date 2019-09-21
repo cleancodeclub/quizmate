@@ -24,11 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Force SSL in production
+        if ($this->app->environment() == 'production') {
+            URL::forceScheme('https');
+        }
     }
-}
-
-// Force SSL in production
-if ($this->app->environment() == 'production') {
-    URL::forceScheme('https');
 }
