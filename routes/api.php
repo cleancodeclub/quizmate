@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,17 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', function () {
-    return response()->json([
-        'message' => 'Successful JSON response'
-    ], 200);
-});
+Route::get('/questions', 'QuestionsController@index');
 
-Route::get('/question', function () {
-    return response()->json([
-        'message' => 'Successful JSON response for questions'
-    ], 200);
-});
 
 Route::get('/categories', 'CategoryController@index');
 Route::get('/categories/{id}', 'CategoryController@show');

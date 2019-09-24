@@ -11,13 +11,17 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/api', function () {
-    return view('api');
+Route::get('/guide', function () {
+    return view('guide');
 });
+
+Route::get('question/create', 'QuestionsController@create');
 
 Auth::routes();
 

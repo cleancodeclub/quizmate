@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Question;
 use Illuminate\Http\Request;
 
-class QuestionController extends Controller
+class QuestionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+        return Question::all();
     }
 
     /**
@@ -24,7 +24,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('questions.create');
     }
 
     /**
