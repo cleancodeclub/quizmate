@@ -17,4 +17,21 @@ class CategoryController extends Controller
     {
         return Category::findOrFail($id);
     }
+
+    public function create()
+    {
+        return view('categories.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validatedData = $request->valudate([
+            'name' => 'required', 'min:3', 'max:30',
+            'description' => 'min:5', 'max:255'
+        ]);
+
+        Category::create($validatedData);
+
+        return redirect('/api/categories');
+    }
 }

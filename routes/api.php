@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/questions', 'QuestionsController@index');
+Route::get('/questions/{id}', 'QuestionsController@show');
 
 
 Route::get('/categories', 'CategoryController@index');
