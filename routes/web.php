@@ -27,6 +27,7 @@ Route::get('/questions', 'QuestionsController@store');
 
 // web category routes
 Route::get('/categories/create', 'CategoryController@create');
+Route::post('/categories', 'CategoryController@store');
 
 
 Auth::routes();

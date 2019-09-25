@@ -25,7 +25,7 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->valudate([
+        $validatedData = $request->validate([
             'name' => 'required', 'min:3', 'max:30',
             'description' => 'min:5', 'max:255'
         ]);
