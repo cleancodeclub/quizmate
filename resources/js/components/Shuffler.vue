@@ -22,17 +22,13 @@ export default {
 
   methods: {
     async getAllCatagories() {
-      const res = await axios.post(
-        "https://quiz-mate-api.herokuapp.com/graphql",
-        {
-          // const res = await axios.post("http://quiz-mate-server.test/graphql", {
-          query: `{
+      const res = await axios.post("http://quiz-mate-server.test/graphql", {
+        query: `{
             allCategories {
               name
             }
           }`
-        }
-      );
+      });
       this.categories = res.data.data;
       console.log(res.data);
     }
