@@ -12,7 +12,7 @@
 import gql from "graphql-tag";
 export default {
   query: gql`
-    query Categories {
+    query getCategories {
       allCategories {
         id
         name
