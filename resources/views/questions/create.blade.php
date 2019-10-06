@@ -8,12 +8,12 @@
   
   <div class="form-group">
     <label for="question_text">Question</label>
-    <textarea class="form-control" type="text" name="question_text" required value="{{ old('name') }}"></textarea>
+    <textarea class="form-control" type="text" name="question_text" required value="{{ old('question_text') }}"></textarea>
   </div>
 
   <div class="form-group">
     <label for="answer_text">Answer</label>
-    <textarea class="form-control" name="answer_text" required value="{{ old('description') }}"></textarea>
+    <textarea class="form-control" name="answer_text" required value="{{ old('answer_text') }}"></textarea>
   </div>
 
   <div class="form-inline">
