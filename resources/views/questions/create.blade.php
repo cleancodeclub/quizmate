@@ -30,8 +30,8 @@
   </div>
 
   <div class="form-group mx-6">
-    <label class="mx-2" for="category">Category: </label>
-    <select class="form-control">
+    <label class="mx-2" for="category_id">Category: </label>
+    <select class="form-control" name="category_id">
       <option disabled="disabled" value="">---Select One---</option>
       @foreach ($categories as $category)
         <option value="{{ (int)$category->id }}">{{ $category->name }}</option>
