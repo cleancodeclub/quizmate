@@ -30,7 +30,6 @@ type Category {
 
 type Question {
     id: ID!
-    name: String!
     question_text: String!
     answer_text: String!
     value: Int!

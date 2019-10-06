@@ -22,8 +22,8 @@ Route::get('/guide', function () {
 });
 
 // web question routes
-Route::get('/question/create', 'QuestionsController@create');
-Route::get('/questions', 'QuestionsController@store');
+Route::get('/questions/create', 'QuestionsController@create');
+Route::post('/questions', 'QuestionsController@store');
 
 // web category routes
 Route::get('/categories/create', 'CategoryController@create');
