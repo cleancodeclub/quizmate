@@ -6,6 +6,7 @@ scalar DateTime
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
 type Query {
+    me: User! @auth
     allCategories: [Category!]! @all
     category(id: Int! @eq): Category @find
 }
@@ -35,5 +36,5 @@ type Question {
     value: Int!
     created_at: DateTime!
     updated_at: DateTime!
-    category: [Category!]! @belongsToOne
+    category: [Category!]! @belongsTo
 }
