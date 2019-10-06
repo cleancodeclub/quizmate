@@ -7395,13 +7395,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   query: graphql_tag__WEBPACK_IMPORTED_MODULE_0___default()(_templateObject())
@@ -49892,24 +49885,7 @@ var render = function() {
             loading
               ? _c("div", [_vm._v("Loading...")])
               : data
-              ? _c(
-                  "div",
-                  [
-                    _vm._l(data, function(category) {
-                      return _c("div", { key: category.id }, [
-                        _c("p", [_vm._v("Category: " + _vm._s(category.name))]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v("Description: " + _vm._s(category.description))
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [_vm._v("ID: " + _vm._s(category.id))])
-                      ])
-                    }),
-                    _vm._v("\n      " + _vm._s(data.id) + "\n    ")
-                  ],
-                  2
-                )
+              ? _c("div", [_vm._v(_vm._s(data.id))])
               : _c("div", [_vm._v(_vm._s(error))])
           ]
         }
