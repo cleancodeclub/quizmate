@@ -7374,7 +7374,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_0__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    query AllCategories {\n      allCategories {\n        id\n        name\n        description\n      }\n    }\n  "]);
+  var data = _taggedTemplateLiteral(["\n    query Categories {\n      allCategories {\n        id\n        name\n        description\n      }\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;

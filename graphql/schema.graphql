@@ -35,4 +35,5 @@ type Question {
     value: Int!
     created_at: DateTime!
     updated_at: DateTime!
+    category: [Category!]! @belongsToOne
 }
