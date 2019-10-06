@@ -21,15 +21,6 @@ Route::get('/guide', function () {
     return view('guide');
 });
 
-// web question routes
-Route::get('/questions/create', 'QuestionsController@create');
-Route::post('/questions', 'QuestionsController@store');
-
-// web category routes
-Route::get('/categories/create', 'CategoryController@create');
-Route::post('/categories', 'CategoryController@store');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
