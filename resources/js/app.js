@@ -27,6 +27,18 @@ Vue.component('shuffler', require('./components/Shuffler.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import ApolloClient from 'apollo-boost';
+import VueApollo from 'vue-apollo';
+
+const apolloProvider = new VueApollo({
+    defaultClient: new ApolloClient({
+        uri: '/graphql'
+    })
+});
+
+Vue.use(VueApollo);
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    apolloProvider
 });
