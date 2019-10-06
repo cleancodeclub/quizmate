@@ -49885,7 +49885,7 @@ var render = function() {
             loading
               ? _c("div", [_vm._v("Loading...")])
               : data
-              ? _c("div", [_vm._v(_vm._s(data.id))])
+              ? _c("div", [_vm._v(_vm._s(data))])
               : _c("div", [_vm._v(_vm._s(error))])
           ]
         }
