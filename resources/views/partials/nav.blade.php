@@ -11,10 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="{{url('/api')}}" class="nav-link">API</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Guide</a>
+                    <a href="{{url('/guide')}}" class="nav-link">Guide</a>
                 </li>
             </ul>
 
@@ -31,6 +28,23 @@
                         </li>
                     @endif
                 @else
+                    @if ( Auth::id() == 16 || 17 )
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/categories/create') }}">
+                                <button class="btn btn-outline-success">
+                                    New Category
+                                </button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/questions/create') }}">
+                                <button class="btn btn-outline-success">
+                                    New Question
+                                </button>
+                            </a>
+                        </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
