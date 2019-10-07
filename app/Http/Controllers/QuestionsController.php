@@ -37,7 +37,7 @@ class QuestionsController extends Controller
             'user_id' => Auth::id()
         ]);
 
-        return redirect('/api/questions');
+        return redirect('/api/questions')->with('success', 'Question saved!');;
     }
 
     public function show($id)
