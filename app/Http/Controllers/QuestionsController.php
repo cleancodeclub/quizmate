@@ -11,7 +11,9 @@ use Illuminate\Http\Request;
 class QuestionsController extends Controller
 {
     public function index()
-    { }
+    {
+        return Question::all();
+    }
 
     public function create()
     {
@@ -22,8 +24,6 @@ class QuestionsController extends Controller
 
     public function store(Request $request)
     {
-        $submitted_by = Auth::user()->name;
-
         $validatedData = $request->validate([
             'question_text' => 'required', 'min:3', 'max:255',
             'answer_text' => 'required', 'min:3', 'max:255',
@@ -31,10 +31,11 @@ class QuestionsController extends Controller
             'category_id' => 'required',
         ]);
 
-        $validatedData + [
-            'submitted_by' => $submitted_by,
-        ];
-
+        Question::create($validatedData + [
+            'submitted_by' => Auth::user()->name,
+            'category_name' => Category::find($validatedData['category_id'])->name,
+            'user_id' => Auth::id()
+        ]);
 
         return redirect('/api/questions');
     }
