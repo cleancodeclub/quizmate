@@ -12,9 +12,4 @@ class Question extends Model
     {
         $this->belongsTo('App\Category');
     }
-
-    public function answer()
-    {
-        $this->hasOne('App\Answer');
-    }
 }

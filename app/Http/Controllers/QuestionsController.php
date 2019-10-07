@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Question;
 use App\Category;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
 {
     public function index()
-    {
-        return Question::all();
-    }
+    { }
 
     public function create()
     {
@@ -23,6 +22,8 @@ class QuestionsController extends Controller
 
     public function store(Request $request)
     {
+        $submitted_by = Auth::user()->name;
+
         $validatedData = $request->validate([
             'question_text' => 'required', 'min:3', 'max:255',
             'answer_text' => 'required', 'min:3', 'max:255',
@@ -30,7 +31,10 @@ class QuestionsController extends Controller
             'category_id' => 'required',
         ]);
 
-        Question::create($validatedData);
+        $validatedData + [
+            'submitted_by' => $submitted_by,
+        ];
+
 
         return redirect('/api/questions');
     }

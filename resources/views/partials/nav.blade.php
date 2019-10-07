@@ -18,17 +18,24 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
+                @auth
+                    @if ( Auth::id() === 1 )
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ url('/categories/create') }}">
+                                <button class="btn btn-outline-success">
+                                    New Category
+                                </button>
+                            </a>
                         </li>
-                    @endif
-                @else
-                    @if ( Auth::id() == 16 || 17 )
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/questions/create') }}">
+                                <button class="btn btn-outline-success">
+                                    New Question
+                                </button>
+                            </a>
+                        </li>
+                    @elseif ( Auth::id() === 17 )
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/categories/create') }}">
                                 <button class="btn btn-outline-success">
@@ -45,6 +52,28 @@
                             </a>
                         </li>
                     @endif
+                @endauth
+
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    @if ( Auth::id() !== 1 )
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/user-questions/create') }}">
+                                <button class="btn btn-outline-success">
+                                    Submit Question
+                                </button>
+                            </a>
+                        </li>
+                    @endif
+                    
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>

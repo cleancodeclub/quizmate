@@ -19,8 +19,12 @@ class CreateQuestionsTable extends Migration
             $table->string('answer_text');
             $table->integer('value')->default(100);
             $table->integer('category_id');
+            $table->string('category_name');
+            $table->integer('user_id');
+            $table->string('submitted_by');
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
