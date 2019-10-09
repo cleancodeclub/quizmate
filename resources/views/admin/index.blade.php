@@ -27,7 +27,10 @@
             <td>{{ $question->submitted_by }}</td>
             <td><a href="question/{{ $question->id }}/edit"></a><button class="btn btn-warning">Edit</button></a></td>
             <td>
-              <form action="/question/{{ $question->id }}" method="post">
+              <form 
+                onsubmit="return confirm('Do you really want to delete this record?');"
+                action="/question/{{ $question->id }}" 
+                method="post">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger">Delete</button>

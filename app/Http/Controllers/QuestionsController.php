@@ -75,6 +75,6 @@ class QuestionsController extends Controller
         $question = Question::findOrFail($id);
         $question->delete();
 
-        return redirect('/admin/questions')->with('success', 'Question deleted!');
+        return redirect('/admin')->with('success', 'Question deleted!');
     }
 }
