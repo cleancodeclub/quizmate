@@ -23,11 +23,12 @@
     <div id="app">
         @include('partials.nav')
 
-        <div class="container">
-            <main class="py-4">
+        <div>
+            <main>
                 @yield('content')
             </main>
         </div>
     </div>
+    {{-- @include('partials.footer') --}}
 </body>
 </html>

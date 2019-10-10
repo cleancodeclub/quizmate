@@ -10,9 +10,15 @@ use Illuminate\Http\Request;
 
 class QuestionsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return Question::all();
+        if ($request->has('value')) {
+            return Question::where('value', $request->value)->get();
+        } elseif ($request->has('category_name')) {
+            return Question::where('category_name', $request->category_name)->get();
+        } else {
+            return Question::all();
+        }
     }
 
     public function create()
