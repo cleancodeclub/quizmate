@@ -9,8 +9,7 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $question = Question::all()->random()->first();
-        // dd($question);
+        $question = Question::all()->random();
 
         return view('welcome', compact('question'));
     }

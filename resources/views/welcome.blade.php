@@ -1,20 +1,20 @@
 @extends('layouts.app')
 @section('content')
 <div class="jumbotron pt-3 px-5 pb-0 d-flex justify-content-between">
-    <div class="w-25">
+    <div class="col-md-3 d-none d-sm-block">
         <img class="img-fluid mx-5" src="https://svgsilh.com/svg/3409194.svg" alt="quiz">
     </div>
-    <div class="w-50 mx-5 px-5">
-        <h1 class="text-center pt-2">Quizmate</h1>
+    <div class="offset-md-2 col-md-7 col-sm-12 col-xs-12">
+        <h1 class="text-center">Quizmate</h1>
         <h3>The REST and GraphQL API for all of your quiz question needs!</h3>
     </div>
 </div>
 <div class="container">
     
-    <div class="d-flex justify-content-between">
+    <div class="row">
         
-        <div class="w-100">
-            <h1>API Usage</h1>
+        <div class="col-md-5 col-xs-12 order-xs-12">
+            <h1 class="text-xs-center">API Usage</h1>
             <h4>Questions</h4>
             <p class="ml-4">★  Url: <kbd>/api/questions</kbd></p>
             <p class="ml-4">★  Options <small>All options are optional:</small></p>
@@ -24,23 +24,23 @@
             <p class="ml-4">- Url: <kbd>/api/categories</kbd></p>
         </div>
 
-        <div class="w-75 ml-5">
-            <div class="card text-center w-75 pb-2">
-                <div class="card-header">
+        <div class="offset-md-1 col-md-6 col-xs-12 order-xs-1">
+            <div class="card">
+                <div class="card-header text-center">
                     <h2>Random Question</h2>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">Question: {{ $question->question_text }} <p>
+                    <p class="card-text"><strong>Question:</strong> {{ $question->question_text }} <p>
                     <hr>
-                    <p class="card-text">Answer: {{ $question->answer_text }} <p>
+                    <p class="card-text"><strong>Answer:</strong> {{ $question->answer_text }} <p>
                     <hr>
-                    <p class="card-text mb">Value: {{ $question->value }} <p>
+                    <p class="card-text mb"><strong>Value:</strong> {{ $question->value }} <p>
                     <hr>
-                    <p class="card-text mb">Submitted By: {{ $question->submitted_by }} <p>
+                    <p class="card-text mb"><strong>Submitted By:</strong> {{ $question->submitted_by }} <p>
                 </div>
-                <div class="card-footer text-muted">
-                    <p> Raw Query: </p> 
-                    <p> {{ $question }} </p>
+                <div class="card-footer">
+                    <p class="text-center"> Raw Query </p> 
+                    <p class="text-muted"> {{ $question }} </p>
                 </div>
             </div>
         </div>
