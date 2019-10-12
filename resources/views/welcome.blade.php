@@ -21,7 +21,10 @@
             <p class="ml-4 pl-4">&bull; <kbd>value</kbd>(int): All questions with the requested value. </p>
             <p class="ml-4 pl-4">&bull; <kbd>category</kbd>(string): All questions in the requested category. </p>
             <h4>Categories</h4>
-            <p class="ml-4">- Url: <kbd>/api/categories</kbd></p>
+            <p class="ml-4">★ Url: <kbd>/api/categories</kbd></p>
+            <h4>GraphQL</h4>
+            <p class="ml-4">★ Url: <kbd>/GraphQL-playground</kbd></p>
+            <p></p>
         </div>
 
         <div class="offset-md-1 col-md-6 col-xs-12 order-xs-1">
