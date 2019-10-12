@@ -1,5 +1,5 @@
-<footer class="page-footer">
-  <div class="jumbotron">
-    <p>Created by: Kevin Chisholm</p>
+<footer class="footer">
+  <div>
+    <p>Created by: CleanCodeClub</p>
   </div>
 </footer>

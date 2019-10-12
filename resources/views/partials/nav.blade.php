@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-transparent">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        {{-- <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Quizmate') }}
-        </a>
+        </a> --}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +58,7 @@
                         </li>
                     @endif
                 @else
-                    @if ( Auth::id() !== 1 )
+                    {{-- @if ( Auth::id() !== 1 )
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/user-questions/create') }}">
                                 <button class="btn btn-outline-success">
@@ -66,7 +66,7 @@
                                 </button>
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                     
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

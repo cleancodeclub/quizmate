@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('content')
-<div class="jumbotron pt-3 px-5 pb-0 d-flex justify-content-between">
-    <div class="col-md-3 d-none d-sm-block">
-        <img class="img-fluid mx-5" src="https://svgsilh.com/svg/3409194.svg" alt="quiz">
-    </div>
-    <div class="offset-md-2 col-md-7 col-sm-12 col-xs-12">
-        <h1 class="text-center">Quizmate</h1>
-        <h3>The REST and GraphQL API for all of your quiz question needs!</h3>
+<div class="jumbotron pt-3 px-5 pb-0 d-flex justify-content-between bg-transparent">
+    <div class="container row">
+        <div class="offset-md-2 col-md-3 d-none d-sm-block">
+            <img class="img-fluid" src="https://svgsilh.com/svg/3409194.svg" alt="quiz">
+        </div>
+        <div class="col-md-7 col-sm-12 col-xs-12">
+            <h1 class="text-center">Quizmate</h1>
+            <h3>The REST and GraphQL API for all of your quiz question needs! A community based API, an ever-evolving product growing with you, the user!</h3>
+        </div>
     </div>
 </div>
 <div class="container">
-    
     <div class="row">
-        
         <div class="col-md-5 col-xs-12 order-xs-12">
             <h1 class="text-xs-center">API Usage</h1>
             <h4>Questions</h4>
