@@ -10,6 +10,6 @@ class Question extends Model
 
     public function category()
     {
-        $this->belongsTo('App\Category');
+        $this->belongsTo(Category::class);
     }
 }

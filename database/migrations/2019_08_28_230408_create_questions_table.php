@@ -26,10 +26,6 @@ class CreateQuestionsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('user_id')->references('id')->on('users');
         });
-
-        Schema::table('questions', function (Blueprint $table) {
-            $table->dropColumn(['user_id', 'category_id']);
-        });
     }
 
 

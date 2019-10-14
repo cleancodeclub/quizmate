@@ -10,6 +10,6 @@ class Category extends Model
 
     public function question()
     {
-        $this->hasMany('App\Question');
+        $this->hasMany(Question::class);
     }
 }
