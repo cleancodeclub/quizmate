@@ -3,6 +3,13 @@ Quizmate is a thought experiment, attempting to build a REST API and a GraphQL A
 
 ![Imgur](https://i.imgur.com/0x21V50.png)
 
+### Technologies used
+
+- [Laravel](https://laravel.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [GraphQL](https://graphql.org/)
+- [Lighthouse](https://lighthouse-php.com/)
+
 ### API Usage
 
 #### Questions
@@ -39,7 +46,7 @@ https://quiz-mate-api.herokuapp.com/api/categories
 ```
 
 ##### Example Query 2
-```
+``` 
 {
   category(id:9) {
     name
