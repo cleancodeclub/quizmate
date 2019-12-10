@@ -1,9 +1,7 @@
 # Quizmate
+Quizmate is a thought experiment, attempting to build a REST API and a GraphQL API attached to a single source of data. 
 
 ![Imgur](https://i.imgur.com/0x21V50.png)
-
-### Introduction
-Quizmate is a thought experiment, attempting to build a REST API and a GraphQL API attached to a single source of data. 
 
 ### API Usage
 
